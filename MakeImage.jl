@@ -41,7 +41,7 @@ function valColour(val, cmap::ColourMap, llim = 0.0f0, ulim = 1.0f0)
     valpos == 0 && return cmap.marks[1].c
     valpos == 1 && return cmap.marks[end].c
     nextind::Int = 0
-    for i in eachindex(cmap.marks)
+    for i in 1:length(cmap.marks)
         valpos <= cmap.marks[i].pos && (nextind = i; break)
     end
     prevc = vectorize(cmap.marks[nextind - 1].c)
