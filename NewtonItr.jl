@@ -1,5 +1,5 @@
 function newtonItr(fun::Function, min::Complex, max::Complex,
-    wid::Int = 800, hgt::Int = 600)
+                                    wid::Int = 800, hgt::Int = 600)
     x = range(min.re, max.re, length = wid)
     y = range(min.im, max.im, length = hgt)
     val = fill(Int32(0), (hgt, wid))

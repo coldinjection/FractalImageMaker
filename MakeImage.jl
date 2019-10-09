@@ -51,7 +51,7 @@ function valColour(val, cmap::ColourMap, llim = 0.0f0, ulim = 1.0f0)
     return RGB{N0f8}(prevc + (nextc - prevc) * (valpos - prevp) / (nextp - prevp)...)
 end
 
-function makeImage(val, cmap::ColourMap)
+function makeImage(val::Array, cmap::ColourMap)
     img = similar(val, RGB{N0f8})
     llim, ulim = extrema(val)
     img = map(x -> valColour(x, cmap, llim, ulim), val)
