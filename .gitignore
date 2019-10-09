@@ -1,0 +1,13 @@
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+deps/deps.jl
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.JPG
+*.JPEG
+*.PNG
+*.BMP
+.vscode
